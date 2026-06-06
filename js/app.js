@@ -99,8 +99,10 @@ function init() {
     if (!e.target.closest(".search-bar")) closeSuggestions();
   });
 
+  document.getElementById("page-modal-back").addEventListener("click", closePage);
+
   document.addEventListener("keydown", e => {
-    if (e.key === "Escape") { closeModal(); closeCompareModal(); }
+    if (e.key === "Escape") { closeModal(); closeCompareModal(); closePage(); }
   });
 
   setTimeout(renderProducts, 650);
