@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,9 +32,17 @@
           placeholder="Buscar productos, marcas, categorías..."
           autocomplete="off"
         />
+        <div id="search-suggestions"></div>
       </div>
 
       <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" title="Cambiar tema">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <button class="wishlist-btn" id="wishlist-btn" title="Favoritos">
+          ♡
+          <span id="wishlist-count">0</span>
+        </button>
         <button class="cart-btn" id="cart-btn" title="Ver carrito">
           🛒
           <span id="cart-count">0</span>
@@ -77,6 +85,27 @@
     <aside class="sidebar">
       <p class="sidebar-title">Categorías</p>
       <nav id="category-list"></nav>
+
+      <!-- Price Filter -->
+      <div class="price-filter">
+        <p class="price-filter-title">Precio</p>
+        <div class="price-range-display">
+          <span id="price-display-min">$0</span>
+          <span id="price-display-max">$4000</span>
+        </div>
+        <div class="price-slider-wrap">
+          <div class="price-track"></div>
+          <div class="price-fill" id="price-fill"></div>
+          <input type="range" class="range-slider" id="price-min" min="0" max="4000" value="0" step="50" />
+          <input type="range" class="range-slider" id="price-max" min="0" max="4000" value="4000" step="50" />
+        </div>
+      </div>
+
+      <!-- Recently Viewed -->
+      <div class="recently-viewed" id="recently-section" style="display:none">
+        <p class="recently-viewed-title">Vistos recientemente</p>
+        <div class="recently-list" id="recently-list"></div>
+      </div>
     </aside>
 
     <!-- Main -->
@@ -96,6 +125,16 @@
     </main>
 
   </div>
+
+  <!-- ── Wishlist Panel ──────────────────────────────────────────────────── -->
+  <div id="wishlist-overlay"></div>
+  <aside id="wishlist-panel">
+    <div class="wishlist-header">
+      <h2>♡ Favoritos</h2>
+      <button id="close-wishlist">✕</button>
+    </div>
+    <div id="wishlist-items"></div>
+  </aside>
 
   <!-- ── Cart ───────────────────────────────────────────────────────────── -->
   <div id="cart-overlay"></div>
@@ -120,6 +159,32 @@
     <div class="modal-box">
       <button id="modal-close">✕</button>
       <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ── Compare Modal ──────────────────────────────────────────────────── -->
+  <div id="compare-modal">
+    <div id="compare-modal-overlay"></div>
+    <div class="compare-modal-box">
+      <button id="compare-modal-close">✕</button>
+      <h2 style="margin-bottom:24px;font-size:22px;font-weight:800">⇄ Comparar productos</h2>
+      <div style="overflow-x:auto">
+        <table class="compare-table">
+          <tbody id="compare-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Compare Bar ────────────────────────────────────────────────────── -->
+  <div id="compare-bar">
+    <div class="compare-bar-inner">
+      <span class="compare-bar-label">Comparar:</span>
+      <div id="compare-slots"></div>
+      <div class="compare-actions">
+        <button id="clear-compare">Limpiar</button>
+        <button id="compare-btn">⇄ Comparar</button>
+      </div>
     </div>
   </div>
 

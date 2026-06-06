@@ -10,7 +10,7 @@ const products = [
     badge: "Bestseller",
     description: "Titanio. Tan resistente, tan ligero. Chip A17 Pro con GPU de 6 núcleos. Sistema de cámara Pro con zoom óptico 5x.",
     specs: ["Chip A17 Pro", "6.7\" Super Retina XDR", "48MP + 12MP + 12MP", "Titanio", "USB-C"],
-    img: "https://placehold.co/400x400/1a1a2e/ffffff?text=iPhone+15+Pro",
+    img: "https://images.unsplash.com/photo-1592286927505-1def25115558?auto=format&fit=crop&w=400&h=400",
     stock: 15
   },
   {
@@ -24,7 +24,7 @@ const products = [
     badge: "Nuevo",
     description: "Galaxy AI integrado. S Pen incluido. Cámara de 200MP con zoom 100x Space Zoom.",
     specs: ["Snapdragon 8 Gen 3", "6.8\" Dynamic AMOLED 2X", "200MP + 50MP + 10MP", "Titanio", "S Pen"],
-    img: "https://placehold.co/400x400/0f3460/ffffff?text=Galaxy+S24+Ultra",
+    img: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=400&h=400",
     stock: 8
   },
   {
@@ -38,7 +38,7 @@ const products = [
     badge: "Pro",
     description: "Potencia revolucionaria. Chip M3 Pro con CPU de 11 núcleos y GPU de 14 núcleos. Batería de hasta 22 horas.",
     specs: ["Chip M3 Pro", "14.2\" Liquid Retina XDR", "18GB RAM", "512GB SSD", "Hasta 22h batería"],
-    img: "https://placehold.co/400x400/16213e/ffffff?text=MacBook+Pro+M3",
+    img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&h=400",
     stock: 5
   },
   {
@@ -52,7 +52,7 @@ const products = [
     badge: "Top Rated",
     description: "Cancelación de ruido líder en la industria. 30 horas de batería. Calidad de audio Hi-Res.",
     specs: ["ANC líder industria", "30h de batería", "Bluetooth 5.2", "Hi-Res Audio", "8 micrófonos"],
-    img: "https://placehold.co/400x400/533483/ffffff?text=Sony+WH-1000XM5",
+    img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&h=400",
     stock: 22
   },
   {
@@ -66,7 +66,7 @@ const products = [
     badge: "Nuevo",
     description: "El más delgado de Apple. Chip M4, pantalla Ultra Retina XDR OLED y Apple Pencil Pro.",
     specs: ["Chip M4", "13\" Ultra Retina XDR OLED", "256GB", "Wi-Fi 6E", "Apple Pencil Pro"],
-    img: "https://placehold.co/400x400/0f4c81/ffffff?text=iPad+Pro+M4",
+    img: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=400&h=400",
     stock: 11
   },
   {
@@ -80,7 +80,7 @@ const products = [
     badge: "Gaming",
     description: "La GPU más potente del mundo. 24GB GDDR6X. Ray Tracing y DLSS 3 para gaming y creación de contenido.",
     specs: ["24GB GDDR6X", "CUDA Cores: 16384", "Ray Tracing", "DLSS 3", "PCIe 4.0"],
-    img: "https://placehold.co/400x400/1a0533/ffffff?text=RTX+4090",
+    img: "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=400&h=400",
     stock: 3
   },
   {
@@ -94,7 +94,7 @@ const products = [
     badge: "Adventure",
     description: "El Apple Watch más potente. Titanio de grado aeroespacial. GPS de doble frecuencia. 60 horas de batería.",
     specs: ["Titanio aeroespacial", "GPS doble frecuencia", "60h batería", "S9 SiP", "Resistente 100m"],
-    img: "https://placehold.co/400x400/1c1c1e/ffffff?text=Apple+Watch+Ultra+2",
+    img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&h=400",
     stock: 9
   },
   {
@@ -108,7 +108,7 @@ const products = [
     badge: "OLED",
     description: "Pantalla OLED 3.5K impresionante. Intel Core i9 de 13.ª gen. Diseño ultradelgado y premium.",
     specs: ["Intel Core i9-13900H", "15.6\" OLED 3.5K", "32GB DDR5", "1TB NVMe", "GeForce RTX 4060"],
-    img: "https://placehold.co/400x400/002147/ffffff?text=Dell+XPS+15",
+    img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400&h=400",
     stock: 7
   },
   {
@@ -122,7 +122,7 @@ const products = [
     badge: "Nuevo",
     description: "Dron compacto con cámara de 4K/60fps. Autonomía de 34 minutos. Omnidireccional obstacle sensing.",
     specs: ["4K/60fps HDR", "34 min autonomía", "Obstacle sensing 360°", "< 249g", "ActiveTrack 360°"],
-    img: "https://placehold.co/400x400/4a4e69/ffffff?text=DJI+Mini+4+Pro",
+    img: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=400&h=400",
     stock: 14
   },
   {
@@ -136,7 +136,7 @@ const products = [
     badge: "Hot",
     description: "PlayStation 5 Pro con GPU mejorada. Ray Tracing avanzado. 2TB SSD. 8K gaming ready.",
     specs: ["CPU AMD Zen 2 8-Core", "GPU AMD Radeon RDNA 4", "2TB SSD", "Ray Tracing avanzado", "8K ready"],
-    img: "https://placehold.co/400x400/00349c/ffffff?text=PS5+Pro",
+    img: "https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&w=400&h=400",
     stock: 4
   },
   {
@@ -150,7 +150,7 @@ const products = [
     badge: "8K",
     description: "Televisor Neo QLED 8K con tecnología Quantum Matrix. Procesador Neo Quantum 8K. Dolby Atmos.",
     specs: ["8K 7680x4320", "75\" Neo QLED", "144Hz", "Dolby Atmos", "Game Mode Pro"],
-    img: "https://placehold.co/400x400/1e3a5f/ffffff?text=Samsung+Neo+QLED+8K",
+    img: "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=400&h=400",
     stock: 2
   },
   {
@@ -164,8 +164,78 @@ const products = [
     badge: "Favorito",
     description: "El ratón más avanzado de Logitech. 8000 DPI, clic silencioso, scroll MagSpeed electromagnético.",
     specs: ["8000 DPI", "Scroll MagSpeed", "Clic silencioso", "USB-C", "Bluetooth + receptor"],
-    img: "https://placehold.co/400x400/2d3561/ffffff?text=MX+Master+3S",
+    img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=400&h=400",
     stock: 45
+  },
+  {
+    id: 13,
+    name: "AirPods Pro 2",
+    category: "audio",
+    price: 249.99,
+    originalPrice: 279.99,
+    rating: 4.8,
+    reviews: 5621,
+    badge: "Apple",
+    description: "Audio adaptativo y ANC de siguiente nivel. Chip H2 para sonido más limpio. Hasta 30h con estuche.",
+    specs: ["Chip H2", "ANC adaptativo", "30h con estuche", "Resistente al agua IP54", "USB-C"],
+    img: "https://images.unsplash.com/photo-1588423771073-b8903febb85d?auto=format&fit=crop&w=400&h=400",
+    stock: 30
+  },
+  {
+    id: 14,
+    name: "Google Pixel 9 Pro",
+    category: "smartphones",
+    price: 999.99,
+    originalPrice: 1099.99,
+    rating: 4.7,
+    reviews: 1432,
+    badge: "AI",
+    description: "El smartphone con la mejor IA de Google. Tensor G4, cámara de 50MP con zoom 5x y 7 años de actualizaciones.",
+    specs: ["Google Tensor G4", "6.3\" LTPO OLED", "50MP + 48MP + 48MP", "16GB RAM", "7 años actualizaciones"],
+    img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&h=400",
+    stock: 18
+  },
+  {
+    id: 15,
+    name: "ASUS ROG Zephyrus G14",
+    category: "laptops",
+    price: 1649.99,
+    originalPrice: 1899.99,
+    rating: 4.8,
+    reviews: 743,
+    badge: "Gaming",
+    description: "Laptop gaming ultraportátil con AMD Ryzen 9 y RTX 4070. Pantalla QHD 165Hz. Solo 1.65kg.",
+    specs: ["AMD Ryzen 9 8945HS", "14\" QHD 165Hz", "RTX 4070", "32GB DDR5", "1TB SSD"],
+    img: "https://images.unsplash.com/photo-1593642633279-1796119d1c48?auto=format&fit=crop&w=400&h=400",
+    stock: 6
+  },
+  {
+    id: 16,
+    name: "Nintendo Switch OLED",
+    category: "gaming",
+    price: 349.99,
+    originalPrice: 399.99,
+    rating: 4.7,
+    reviews: 6234,
+    badge: "OLED",
+    description: "Pantalla OLED vibrante de 7 pulgadas. Base mejorada con LAN integrada. Almacenamiento interno de 64GB.",
+    specs: ["Pantalla OLED 7\"", "64GB almacenamiento", "LAN integrada en base", "Batería 4.5-9h", "Joy-Con"],
+    img: "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?auto=format&fit=crop&w=400&h=400",
+    stock: 20
+  },
+  {
+    id: 17,
+    name: "Razer BlackShark V2 Pro",
+    category: "gaming",
+    price: 179.99,
+    originalPrice: 199.99,
+    rating: 4.6,
+    reviews: 2109,
+    badge: "Pro",
+    description: "Auriculares gaming inalámbricos con THX Spatial Audio. Micrófono HyperClear Supercardioid. 70h batería.",
+    specs: ["THX Spatial Audio", "Micrófono Supercardioid", "70h batería", "Wireless 2.4GHz", "Drivers 50mm"],
+    img: "https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=400&h=400",
+    stock: 13
   }
 ];
 
