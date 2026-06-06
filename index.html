@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OKITA SHOPS — Tu Marketplace Tech</title>
+  <meta name="description" content="El mejor marketplace de tecnología. Smartphones, laptops, audio, gaming y más con los mejores precios." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <div class="logo-icon">⚡</div>
+        <div class="logo-text">
+          <strong>OKITA SHOPS</strong>
+          <small>Tech Marketplace</small>
+        </div>
+      </a>
+
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Buscar productos, marcas, categorías..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cart-btn" title="Ver carrito">
+          🛒
+          <span id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ───────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">✦ Nuevo · Junio 2026</div>
+      <h1>Lo mejor en <span>tecnología</span> al mejor precio</h1>
+      <p>Smartphones, laptops, audio, gaming y mucho más. Envío rápido y garantía en todos tus productos.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>+500</strong>
+          <span>Productos</span>
+        </div>
+        <div class="hero-stat">
+          <strong>4.9★</strong>
+          <span>Calificación</span>
+        </div>
+        <div class="hero-stat">
+          <strong>24/7</strong>
+          <span>Soporte</span>
+        </div>
+        <div class="hero-stat">
+          <strong>100%</strong>
+          <span>Garantía</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <p class="sidebar-title">Categorías</p>
+      <nav id="category-list"></nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+      <div class="toolbar">
+        <span id="results-count">0 productos</span>
+        <select id="sort-select">
+          <option value="default">Ordenar por: Relevancia</option>
+          <option value="price-asc">Precio: Menor a mayor</option>
+          <option value="price-desc">Precio: Mayor a menor</option>
+          <option value="rating">Mejor calificación</option>
+          <option value="reviews">Más reseñas</option>
+        </select>
+      </div>
+
+      <div id="product-grid"></div>
+    </main>
+
+  </div>
+
+  <!-- ── Cart ───────────────────────────────────────────────────────────── -->
+  <div id="cart-overlay"></div>
+  <aside id="cart-panel">
+    <div class="cart-header">
+      <h2>🛒 Mi Carrito</h2>
+      <button id="close-cart">✕</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <span>Total estimado</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button id="checkout-btn">⚡ Finalizar compra</button>
+    </div>
+  </aside>
+
+  <!-- ── Product Modal ──────────────────────────────────────────────────── -->
+  <div id="product-modal">
+    <div id="modal-overlay"></div>
+    <div class="modal-box">
+      <button id="modal-close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand footer-col">
+          <a href="/" class="logo">
+            <div class="logo-icon">⚡</div>
+            <div class="logo-text">
+              <strong>OKITA SHOPS</strong>
+              <small>Tech Marketplace</small>
+            </div>
+          </a>
+          <p>Tu destino para la mejor tecnología. Precios competitivos, garantía real y envíos rápidos a todo el país.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Audio</a></li>
+            <li><a href="#">Gaming</a></li>
+            <li><a href="#">Wearables</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="#">Centro de ayuda</a></li>
+            <li><a href="#">Seguimiento de pedido</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Garantía</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <span>OKITA SHOPS</span>. Todos los derechos reservados.</p>
+        <p>Hecho con ♥ por <span>Okita</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Scripts ────────────────────────────────────────────────────────── -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
