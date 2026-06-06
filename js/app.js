@@ -99,10 +99,8 @@ function init() {
     if (!e.target.closest(".search-bar")) closeSuggestions();
   });
 
-  document.getElementById("page-modal-back").addEventListener("click", closePage);
-
   document.addEventListener("keydown", e => {
-    if (e.key === "Escape") { closeModal(); closeCompareModal(); closePage(); }
+    if (e.key === "Escape") { closeModal(); closeCompareModal(); }
   });
 
   setTimeout(renderProducts, 650);
@@ -662,6 +660,14 @@ function showToast(msg) {
     el.classList.remove("show");
     setTimeout(() => el.remove(), 400);
   }, 3000);
+}
+
+// ── Category shortcut from footer ─────────────────────────────────────────────
+function goToCategory(cat) {
+  setCategory(cat);
+  setTimeout(() => {
+    document.querySelector(".page-layout").scrollIntoView({ behavior: "smooth" });
+  }, 100);
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────────

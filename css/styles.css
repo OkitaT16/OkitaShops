@@ -1340,6 +1340,30 @@ footer {
 #page-modal-body { flex: 1; overflow-y: auto; }
 #page-modal-content { max-width: 960px; margin: 0 auto; padding: 48px 24px 80px; }
 
+/* ── Inner Pages Layout ────────────────────────────────────────────────────── */
+.inner-page-layout {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.btn-back-store {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(108,99,255,.1);
+  border: 1px solid rgba(108,99,255,.25);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.btn-back-store:hover { background: var(--accent); color: #fff; }
+
 /* ── Page: Common ──────────────────────────────────────────────────────────── */
 .pg-hero { text-align: center; margin-bottom: 48px; }
 .pg-hero h2 { font-size: clamp(26px, 4vw, 44px); font-weight: 900; letter-spacing: -1.5px; margin-bottom: 12px; }
@@ -1507,3 +1531,36 @@ select.form-control { cursor: pointer; }
 .job-dept { padding: 3px 10px; background: rgba(108,99,255,.12); color: var(--accent); border-radius: 100px; font-size: 11px; font-weight: 600; }
 .job-type { padding: 3px 10px; background: var(--bg3); color: var(--text2); border-radius: 100px; font-size: 11px; }
 .job-desc { font-size: 14px; color: var(--text2); line-height: 1.6; margin: 0; }
+
+/* ── Page: Jobs (alternate layout) ────────────────────────────────────────── */
+.jobs-list { display: flex; flex-direction: column; gap: 14px; }
+.job-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 10px; }
+.job-title { display: block; font-size: 16px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+.job-location { padding: 3px 10px; background: var(--bg3); color: var(--text2); border-radius: 100px; font-size: 11px; }
+.job-card p { font-size: 14px; color: var(--text2); line-height: 1.6; margin: 0 0 14px; }
+
+/* ── Page: Blog (inline layout) ───────────────────────────────────────────── */
+.blog-card.featured-post { grid-column: 1 / -1; }
+.blog-img { width: 100%; aspect-ratio: 16/9; background-size: cover; background-position: center; border-radius: 0; }
+.blog-card.featured-post .blog-img { aspect-ratio: 21/9; }
+.blog-body { padding: 20px; }
+.blog-body .blog-tag { display: inline-block; padding: 4px 10px; background: var(--accent); color: #fff; font-size: 10px; font-weight: 700; border-radius: 100px; text-transform: uppercase; margin-bottom: 10px; }
+.blog-body h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; line-height: 1.4; color: var(--text); }
+.blog-body p { font-size: 13px; color: var(--text2); line-height: 1.6; margin-bottom: 14px; }
+
+/* ── Page: About ───────────────────────────────────────────────────────────── */
+.about-story { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 28px; margin-bottom: 40px; display: flex; flex-direction: column; gap: 14px; }
+.about-story p { font-size: 15px; color: var(--text2); line-height: 1.8; margin: 0; }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+
+/* ── Page: Legal ───────────────────────────────────────────────────────────── */
+.legal-doc { display: flex; flex-direction: column; gap: 0; }
+.legal-section { padding: 24px 0; border-bottom: 1px solid var(--border); }
+.legal-section:last-child { border-bottom: none; }
+.legal-section h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+.legal-section p { font-size: 14px; color: var(--text2); line-height: 1.8; margin: 0; }
+.legal-section a { color: var(--accent); text-decoration: none; }
+.legal-section a:hover { text-decoration: underline; }
+
+/* ── Track: success ────────────────────────────────────────────────────────── */
+.track-success { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }

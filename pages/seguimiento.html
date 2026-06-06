@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seguimiento de Pedido — OKITA SHOPS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        <div class="logo-text"><strong>OKITA SHOPS</strong><small>Tech Marketplace</small></div>
+      </a>
+      <div class="header-actions" style="margin-left:auto">
+        <button class="theme-toggle" id="theme-toggle" title="Cambiar tema"><span id="theme-icon">🌙</span></button>
+        <a href="../index.html" class="btn-back-store">← Volver a la tienda</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="inner-page-layout">
+
+    <div class="pg-hero">
+      <h2>Seguimiento de Pedido</h2>
+      <p>Ingresa tu número de pedido para ver el estado en tiempo real</p>
+    </div>
+
+    <div class="track-box">
+      <div class="track-form">
+        <input type="text" id="track-input" class="form-control" placeholder="Ej. 20260001234" maxlength="20"
+               onkeydown="if(event.key==='Enter') trackOrder()" />
+        <button class="pg-btn" onclick="trackOrder()">🔍 Rastrear</button>
+      </div>
+      <div id="track-result" style="display:none;margin-top:28px"></div>
+    </div>
+
+    <div class="pg-section">
+      <h3>¿Cómo funciona el seguimiento?</h3>
+      <div class="pg-grid-2">
+        <div class="step-card"><div class="step-icon">📋</div><strong>Confirmado</strong><p>Tu pedido fue recibido y está siendo procesado.</p></div>
+        <div class="step-card"><div class="step-icon">📦</div><strong>En preparación</strong><p>Empacamos y verificamos cada producto con cuidado.</p></div>
+        <div class="step-card"><div class="step-icon">🚚</div><strong>En camino</strong><p>Tu paquete salió de nuestro almacén y está en ruta.</p></div>
+        <div class="step-card"><div class="step-icon">🏠</div><strong>Entregado</strong><p>¡Tu pedido llegó! Esperamos que lo disfrutes.</p></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand footer-col">
+          <a href="../index.html" class="logo">
+            <div class="logo-icon">⚡</div>
+            <div class="logo-text"><strong>OKITA SHOPS</strong><small>Tech Marketplace</small></div>
+          </a>
+          <p>Tu destino para la mejor tecnología. Precios competitivos, garantía real y envíos rápidos a todo el país.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="../index.html">Smartphones</a></li>
+            <li><a href="../index.html">Laptops</a></li>
+            <li><a href="../index.html">Audio</a></li>
+            <li><a href="../index.html">Gaming</a></li>
+            <li><a href="../index.html">Wearables</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="ayuda.html">Centro de ayuda</a></li>
+            <li><a href="seguimiento.html">Seguimiento de pedido</a></li>
+            <li><a href="devoluciones.html">Devoluciones</a></li>
+            <li><a href="garantia.html">Garantía</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="nosotros.html">Sobre nosotros</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trabaja.html">Trabaja con nosotros</a></li>
+            <li><a href="terminos.html">Términos</a></li>
+            <li><a href="privacidad.html">Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <span>OKITA SHOPS</span>. Todos los derechos reservados.</p>
+        <p>Hecho con ♥ por <span>Okita</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/shared.js"></script>
+  <script>
+    function trackOrder() {
+      const input  = document.getElementById("track-input");
+      const result = document.getElementById("track-result");
+      const val    = input.value.trim();
+      if (!val || val.length < 4) {
+        result.innerHTML = `<div class="track-error">Por favor ingresa un número de pedido válido (mínimo 4 dígitos).</div>`;
+        result.style.display = "block";
+        return;
+      }
+      const steps = [
+        { icon: "✅", label: "Pedido confirmado",  date: "3 Jun 2026",          desc: "Tu pedido fue recibido y confirmado exitosamente.", done: true  },
+        { icon: "📦", label: "En preparación",     date: "4 Jun 2026",          desc: "Estamos empacando tu pedido con cuidado.",          done: true  },
+        { icon: "🚚", label: "En camino",           date: "5 Jun 2026",          desc: "Tu paquete está en ruta hacia tu dirección.",       done: true  },
+        { icon: "🏠", label: "Entregado",           date: "Estimado: 7 Jun 2026", desc: "Pendiente de entrega final.",                      done: false },
+      ];
+      result.innerHTML = `
+        <div class="track-success">
+          <p class="track-order-num">📦 Pedido #${val}</p>
+          <div class="track-timeline">
+            ${steps.map(s => `
+              <div class="track-step ${s.done ? "done" : "pending"}">
+                <div class="track-step-icon">${s.icon}</div>
+                <div class="track-step-info">
+                  <strong>${s.label}</strong>
+                  <span>${s.date}</span>
+                  <p>${s.desc}</p>
+                </div>
+              </div>`).join("")}
+          </div>
+        </div>`;
+      result.style.display = "block";
+    }
+  </script>
+</body>
+</html>

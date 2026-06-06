@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — OKITA SHOPS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        <div class="logo-text"><strong>OKITA SHOPS</strong><small>Tech Marketplace</small></div>
+      </a>
+      <div class="header-actions" style="margin-left:auto">
+        <button class="theme-toggle" id="theme-toggle" title="Cambiar tema"><span id="theme-icon">🌙</span></button>
+        <a href="../index.html" class="btn-back-store">← Volver a la tienda</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="inner-page-layout">
+
+    <div class="pg-hero">
+      <h2>Estamos aquí para ayudarte</h2>
+      <p>Respuesta garantizada en menos de 24 horas</p>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="contact-method">
+          <div class="contact-method-icon">💬</div>
+          <div>
+            <strong>Chat en vivo</strong>
+            <p>Disponible 24/7</p>
+            <span class="contact-badge online">● En línea ahora</span>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-icon">📧</div>
+          <div>
+            <strong>Email</strong>
+            <p>soporte@okitashops.com</p>
+            <span>Respuesta en &lt;24h</span>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-icon">📞</div>
+          <div>
+            <strong>Teléfono</strong>
+            <p>+1 800 OKITA</p>
+            <span>Lun–Vie, 9am–6pm</span>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-icon">🌎</div>
+          <div>
+            <strong>Cobertura</strong>
+            <p>100% Online</p>
+            <span>Envíos a todo el país</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="contact-form" class="contact-form" onsubmit="submitContact(event)">
+        <div class="form-group">
+          <label class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" placeholder="tu@email.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Asunto</label>
+          <select class="form-control">
+            <option>Consulta sobre un producto</option>
+            <option>Estado de mi pedido</option>
+            <option>Devolución o garantía</option>
+            <option>Problema técnico</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mensaje</label>
+          <textarea class="form-control" rows="5" placeholder="Describe tu consulta con detalle..." required></textarea>
+        </div>
+        <button type="submit" id="contact-submit" class="pg-btn" style="width:100%">✉️ Enviar mensaje</button>
+      </form>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand footer-col">
+          <a href="../index.html" class="logo">
+            <div class="logo-icon">⚡</div>
+            <div class="logo-text"><strong>OKITA SHOPS</strong><small>Tech Marketplace</small></div>
+          </a>
+          <p>Tu destino para la mejor tecnología. Precios competitivos, garantía real y envíos rápidos a todo el país.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="../index.html">Smartphones</a></li>
+            <li><a href="../index.html">Laptops</a></li>
+            <li><a href="../index.html">Audio</a></li>
+            <li><a href="../index.html">Gaming</a></li>
+            <li><a href="../index.html">Wearables</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="ayuda.html">Centro de ayuda</a></li>
+            <li><a href="seguimiento.html">Seguimiento de pedido</a></li>
+            <li><a href="devoluciones.html">Devoluciones</a></li>
+            <li><a href="garantia.html">Garantía</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="nosotros.html">Sobre nosotros</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trabaja.html">Trabaja con nosotros</a></li>
+            <li><a href="terminos.html">Términos</a></li>
+            <li><a href="privacidad.html">Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <span>OKITA SHOPS</span>. Todos los derechos reservados.</p>
+        <p>Hecho con ♥ por <span>Okita</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/shared.js"></script>
+  <script>
+    function submitContact(e) {
+      e.preventDefault();
+      const btn = document.getElementById("contact-submit");
+      btn.textContent = "Enviando...";
+      btn.disabled = true;
+      setTimeout(() => {
+        document.getElementById("contact-form").innerHTML = `
+          <div class="contact-success">
+            <div style="font-size:64px;margin-bottom:16px">✉️</div>
+            <h3>¡Mensaje enviado!</h3>
+            <p>Nos pondremos en contacto en menos de 24 horas. ¡Gracias!</p>
+          </div>`;
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
